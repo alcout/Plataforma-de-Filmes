@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pr-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALCOUT FILMES</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="sweetAlert/sweetalert2.css">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" href="imagens/icons8-óculos-3d-48.png">
+</head>
+
+<body>
+    <nav class="bg-danger">
+        <div class="d-flex justify-content-end align-items-center">
+            <a class="navbar-brand justify">ALCOUT FILMES</a>
+            <div class="p-2 float-right" role="search">
+                <input id="pesquisaId" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            </div>
+            <button onclick="Pesquisar()" type="button" class="p-2 btn btn-secondary">Pesquisar</button>
+        </div>
+    </nav>
+
+    <div id="div_carrousel">
+        <div id="carouselExample" class="carousel">
+            <div class="carousel-inner">
+                <div id="i01" class="carousel-item active">
+                    <img src="imagens/01ex.webp" class="d-block w-100 image_size" alt="...">
+                </div>
+            </div>
+            <div class="carousel-inner">
+                <div id="i02" class="carousel-item">
+                    <img src="imagens/02ex.jpg" class="d-block w-100 image_size" alt="...">
+                </div>
+            </div>
+            <div class="carousel-inner">
+                <div id="i03" class="carousel-item">
+                    <img src="imagens/03ex.webp" class="d-block w-100 image_size" alt="...">
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div id="div_filmes">
+
+        <div class="container text-light">
+            <h2>Filmes populares </h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col" onclick="Detalhes(1)">
+                    <img src="imagens/01.jpeg" class="img-fluid" alt="...">
+                    <label class="cor1 labelFilme"> Encanto. </label>
+                </div>
+                <div class="col" onclick="Detalhes(2)">
+                    <img src="imagens/02.jpg" class="img-fluid" alt="...">
+                    <label class="cor1 labelFilme"> Mundo Estranho. </label>
+                </div>
+                <div class="col" onclick="Detalhes(3)">
+                    <img src="imagens/03.jpg" class="img-fluid" alt="...">
+                    <label class="cor1 labelFilme"> Mortal. </label>
+                </div>
+                <div class="col" onclick="Detalhes(4)">
+                    <img src="imagens/04.jpg" class="img-fluid" alt="...">
+                    <label class="cor1 labelFilme"> Pantera Negra. </label>
+                </div>
+                <div class="col" onclick="Detalhes(5)">
+                    <img src="imagens/05.jpg" class="img-fluid" alt="...">
+                    <label class="cor1 labelFilme"> A última festa. </label>
+                </div>
+                <div class="col" onclick="Detalhes(6)">
+                    <img src="imagens/06.jpg" class="img-fluid" alt="...">
+                    <label class="cor1 labelFilme"> Ron bugado. </label>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="container text-light">
+            <h2>Próximos lançamentos </h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col" onclick="Detalhes(7)">
+                    <img src="imagens/07.jpg" class="img-fluid" alt="...">
+                    <label class="cor1 labelFilme"> Intocáveis. </label>
+                </div>
+                <div class="col" onclick="Detalhes(8)">
+                    <img src="imagens/08.jpeg" class="img-fluid" alt="...">
+                    <label class="cor1 labelFilme"> Thor : amor e trovão. </label>
+                </div>
+                <div class="col" onclick="Detalhes(9)">
+                    <img src="imagens/09.jpg" class="img-fluid" alt="...">
+                    <label class="cor1 labelFilme"> Avatar. </label>
+                </div>
+                <div class="col" onclick="Detalhes(10)">
+                    <img src="imagens/10.jpg" class="img-fluid" alt="...">
+                    <label class="cor1 labelFilme"> Divertida mente. </label>
+                </div>
+                <div class="col" onclick="Detalhes(11)">
+                    <img src="imagens/11.jpg" class="img-fluid" alt="...">
+                    <label class="cor1 labelFilme"> Uma quedinha de natal. </label>
+                </div>
+                <div class="col" onclick="Detalhes(12)">
+                    <img src="imagens/12.jpg" class="img-fluid" alt="...">
+                    <label class="cor1 labelFilme"> Dois irmãos. </label>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div id="div_atores">
+        <div class="container text-light">
+            <h2>Atores populares </h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img id="img_redonda" src="imagens/Angelina_Jolie.jpg" class="img-fluid" alt="...">
+                </div>
+                <div class="col">
+                    <img id="img_redonda" src="imagens/brad-pitt.jpg" class="img-fluid" alt="...">
+                </div>
+                <div class="col">
+                    <img id="img_redonda" src="imagens/Jim_Carrey.jpg" class="img-fluid" alt="...">
+                </div>
+                <div class="col">
+                    <img id="img_redonda" src="imagens/johnny_depp.jpg" class="img-fluid" alt="...">
+                </div>
+                <div class="col">
+                    <img id="img_redonda" src="imagens/Keanu_Reeves.jpg" class="img-fluid" alt="...">
+                </div>
+                <div class="col">
+                    <img id="img_redonda" src="imagens/leonardo_dicaprio.jpg" class="img-fluid" alt="...">
+                </div>
+                <div class="col">
+                    <img id="img_redonda" src="imagens/will_smith.jpg" class="img-fluid" alt="...">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <div class="container-fluid">
+        <footer class="cor1">
+            <h4>ALCOUT 2023</h4>
+            <h4>Desenvolvido por @alcout_</h4>
+        </footer>
+        </div:container>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous"></script>
+<script src="js/bootstrap.js"></script>
+<script src="sweetAlert/sweetalert2.js"></script>
+<script src="home.js"></script>
+
+</html>
